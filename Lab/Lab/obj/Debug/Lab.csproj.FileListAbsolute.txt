@@ -1,0 +1,6 @@
+D:\Учебники университет\Лабы\C#\Lab\Lab\bin\Debug\Lab.exe.config
+D:\Учебники университет\Лабы\C#\Lab\Lab\obj\Debug\Lab.csprojResolveAssemblyReference.cache
+D:\Учебники университет\Лабы\C#\Lab\Lab\bin\Debug\Lab.exe
+D:\Учебники университет\Лабы\C#\Lab\Lab\bin\Debug\Lab.pdb
+D:\Учебники университет\Лабы\C#\Lab\Lab\obj\Debug\Lab.exe
+D:\Учебники университет\Лабы\C#\Lab\Lab\obj\Debug\Lab.pdb
