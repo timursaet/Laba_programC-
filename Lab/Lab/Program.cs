@@ -10,30 +10,22 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            int[] a = new int[100];
-
-            int i, n, z, k;
-
-            Console.WriteLine("Введите n и z");
-            n = (int)Console.Read();
-            z = (int)Console.Read();
-            Random b = new Random();
-            for (i = 1; i < n; i++) {
-                a[i] = b.Next(30);
-                Console.Write(a[i]+' ');
-            }
-            k = 0;
-            for (i = 1; i < n; i++) {
-                if (a[i] > z) {
-                    a[i] = z; k++;
-                }
-            }
+            const int n = 10;
+            const int m = 10;
+            int[][] a = new int [n][m];
+            int i, j;
             for (i = 1; i < n; i++)
-            {
-                Console.Write(a[i]+' '); 
+                for (j = 1; j < n; j++) {
+                    a[i][j] = 1;
+                }
+            for (i = 2; i < n - 1; i++) {
+                a[i][1] = 0; a[i][n] = 0;
             }
-            Console.WriteLine("Количество замен: ", k);
-
+            for (i = 1; i < n; i++) {
+                for (j = 1; j < m; j++)
+                    Console.WriteLine(a[i][j]);
+                Console.ReadLine();
+            }
             Console.ReadKey();
         }  
     }
