@@ -10,19 +10,34 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            int x, y;
-            Console.WriteLine("Введите кординаты точек x и y");
-            x = (int) Console.Read();
-            y = (int)Console.Read();
-            if (((x >= -2) & (x <= -1) & (y >= 0) & (y <= 1)) |
-              ((x >= 1) & (x <= 2) & (y >= -2) & (y <= 2)) | ((x >= 1) & (x <= 2) & (y >= 0) & (y <= 1)))
-            {
-                Console.WriteLine("Точка пренадлежит данной области");
+            int n, f, i;
+            double sum;
+            Console.WriteLine("Введите N");
+            n = (int) Console.Read();
+            sum = 0; f = 1;
+            for (i = 1; i < n; i++) {
+                sum = sum + ((Math.Pow(f, i + 1)) / (i * (i + 1)));
+                f = -f;
             }
-            else Console.WriteLine("Точка не пренадлежит данной области");
+            Console.WriteLine("Сумма с циклом for = "+sum);
+            i = 1; sum = 0; f = 1;
+            while (i <= n) {
+                sum = sum + ((Math.Pow(f, i + 1)) / (i * (i + 1)));
+                f = -f;
+                i++;
+            }
+            Console.WriteLine("Сумма с циклом while = " + sum);
+            i = 1; sum = 0; f = 1;
+            do {
+                sum = sum + ((Math.Pow(f, i + 1)) / (i * (i + 1)));
+                f = -f;
+                i++;
+            }
+            while (i<=n);
+            Console.WriteLine("Сумма с циклом do while = " + sum);
 
 
-         Console.ReadKey();
+        Console.ReadKey();
         }  
     }
 }
