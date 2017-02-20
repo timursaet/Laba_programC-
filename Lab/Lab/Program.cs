@@ -10,23 +10,29 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            int n;
-            int x, max, min;
+            int[] a = new int[100];
 
-            Console.WriteLine("Введите число");
-            n = (int) Console.Read();
+            int i, n, z, k;
 
-            min = 9; max = 0;
-
-            while (n>0) {
-                x =n % 10;
-                n = n / 10;
-                if (x < min) min = x;
-                if (x > max) max = x;
+            Console.WriteLine("Введите n и z");
+            n = (int)Console.Read();
+            z = (int)Console.Read();
+            Random b = new Random();
+            for (i = 1; i < n; i++) {
+                a[i] = b.Next(30);
+                Console.Write(a[i]+' ');
             }
-
-            Console.WriteLine("Наибольшая цифра"+max);
-            Console.WriteLine("Наименьшая цифра" + min);
+            k = 0;
+            for (i = 1; i < n; i++) {
+                if (a[i] > z) {
+                    a[i] = z; k++;
+                }
+            }
+            for (i = 1; i < n; i++)
+            {
+                Console.Write(a[i]+' '); 
+            }
+            Console.WriteLine("Количество замен: ", k);
 
             Console.ReadKey();
         }  
