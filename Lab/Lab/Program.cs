@@ -10,28 +10,27 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            int[] a = new int[100];
-
-            int i, k;
+          int i, k;
 
             Console.WriteLine("Введите n и z");
             int n = int.Parse(Console.ReadLine());
             int z = int.Parse(Console.ReadLine());
+            int[] a = new int[n+1];
             Random b = new Random();
-            for (i = 1; i < n; i++)
+            for (i = 1; i <= n; i++)
             {
                 a[i] = b.Next(30);
                 Console.Write(a[i] + " ");
             }
             k = 0; Console.WriteLine();
-            for (i = 1; i < n; i++)
+            for (i = 1; i <= n; i++)
             {
                 if (a[i] > z)
                 {
                     a[i] = z; k++;
                 }
             }
-            for (i = 1; i < n; i++)
+            for (i = 1; i <= n; i++)
             {
                 Console.Write(a[i] + " ");
             }
