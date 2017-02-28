@@ -10,19 +10,31 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            int x, y;
-            Console.WriteLine("Введите кординаты точек x и y");
-            x = (int) Console.Read();
-            y = (int)Console.Read();
-            if (((x >= -2) & (x <= -1) & (y >= 0) & (y <= 1)) |
-              ((x >= 1) & (x <= 2) & (y >= -2) & (y <= 2)) | ((x >= 1) & (x <= 2) & (y >= 0) & (y <= 1)))
-            {
-                Console.WriteLine("Точка пренадлежит данной области");
+            int m, i, max;
+            double a, eps, s, x, f;
+             Console.WriteLine("Введите m");  m = (int) Console.Read();
+             Console.WriteLine("Введите eps");  eps = (int)Console.Read();
+             Console.WriteLine("Введите max"); max = (int)Console.Read();
+             Console.WriteLine("Введите x"); x = (int)Console.Read();
+
+            f = 1;
+            for (i = 1; i < m; i++) {
+                f = f / (1-x);
             }
-            else Console.WriteLine("Точка не пренадлежит данной области");
+            a = 1; s = a; i = 0;
+                while((Math.Abs(a)>eps) & (i<=max)) {
+                 a = -a * x * (-m - 1) / (i + 1);
+                 s = s + a;
+                 i++;
+            }
+            if (i > max) Console.WriteLine("Нет сходимости");
+            else {
+                Console.WriteLine("Сумма ряда"+s);
+                Console.WriteLine("Количество члена ряда"+i);
+                Console.WriteLine("(1-x)^(-"+m+ ")="+f);
+            }
 
-
-         Console.ReadKey();
+            Console.ReadKey();
         }  
     }
 }
