@@ -10,16 +10,11 @@ namespace Lab
     {
         static void Main(string[] args)
         {
-            int x, y;
-            Console.WriteLine("Введите кординаты точек x и y");
-            x = (int) Console.Read();
-            y = (int)Console.Read();
-            if (((x >= -2) & (x <= -1) & (y >= 0) & (y <= 1)) |
-              ((x >= 1) & (x <= 2) & (y >= -2) & (y <= 2)) | ((x >= 1) & (x <= 2) & (y >= 0) & (y <= 1)))
-            {
-                Console.WriteLine("Точка пренадлежит данной области");
-            }
-            else Console.WriteLine("Точка не пренадлежит данной области");
+            string s;
+            int i;
+            Console.WriteLine("Введите строку включая закрывающую и открывающие скобки");
+            s = Console.ReadLine();
+            
 
 
          Console.ReadKey();
