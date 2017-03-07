@@ -21,9 +21,26 @@ namespace Lab
             Console.WriteLine("Введите s и t");
             s = int.Parse(Console.ReadLine());
             t = int.Parse(Console.ReadLine());
+            Console.WriteLine("p(1)="+P(1),a);
+           // Console.WriteLine(P(1)-P(t)+(s-t)*P(s-t)-P(1)*P(1)*P(1));
 
 
          Console.ReadKey();
-        }  
+        }
+
+        public static double P(double x, int a)
+        {
+            int k;
+            double y, sum;
+
+            k = 0; y = 1; sum = 0;
+            while (k<=3) {
+                sum = sum + a[k] * y;
+                y = y * x;
+                k++;
+            }
+
+            return sum;
+        }
     }
 }
