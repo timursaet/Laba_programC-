@@ -21,14 +21,14 @@ namespace Lab
             Console.WriteLine("Введите s и t");
             s = int.Parse(Console.ReadLine());
             t = int.Parse(Console.ReadLine());
-            Console.WriteLine("p(1)="+P(1),a);
+            Console.WriteLine("p(1)="+P(1));
            // Console.WriteLine(P(1)-P(t)+(s-t)*P(s-t)-P(1)*P(1)*P(1));
 
 
          Console.ReadKey();
         }
 
-        public static double P(double x, int a)
+        public static double P(double x)
         {
             int k;
             double y, sum;
