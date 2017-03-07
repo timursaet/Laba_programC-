@@ -14,7 +14,9 @@ namespace Lab
             int i;
             Console.WriteLine("Введите строку включая закрывающую и открывающие скобки");
             s = Console.ReadLine();
-            
+            for (i=s.IndexOf('(')+1; i<s.IndexOf(')');i++) {
+                Console.Write(s[i]);
+            }
 
 
          Console.ReadKey();
